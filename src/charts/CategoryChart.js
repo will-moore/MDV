@@ -32,8 +32,13 @@ class CategoryChart extends SVGChart{
 
     filterCategories(cat,append){
         if (append){
+            // if 'shift' and the item is already in the filter, remove it
             if (this.filter.indexOf(cat)!==-1){
                 this.filter= this.filter.filter(x=>x!==cat)
+                // If we removed the last item, then all items are selected
+                if (this.filter.length == 0) {
+                    this.filter = this.dataStore.getColumnValues(this.config.param);
+                }
             }
             else if (this.filter.length==0){
                 const vs = this.dataStore.getColumnValues(this.config.param);
