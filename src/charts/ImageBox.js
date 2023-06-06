@@ -81,6 +81,10 @@ class ImageBox extends BaseChart{
         super.setSize(x,y);
         this.setImageSizes();
     }
+
+    onDataFiltered(e) {
+        console.log("ImageBox.onDataFiltered", e);
+    }
 }
 
 export default ImageBox;

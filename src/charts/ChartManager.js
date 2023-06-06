@@ -19,6 +19,7 @@ import "./SankeyChart.js";
 import "./MultiLineChart.js";
 import "./DensityScatterPlot";
 import "./SelectionDialog.js";
+import "./ImageBox.js";
 
 
 
